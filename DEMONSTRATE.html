@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Different HTML Tables</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .striped tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .borderless td, .borderless th {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Basic Table -->
+    <h2>Basic Table</h2>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>25</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>30</td>
+            <td>Los Angeles</td>
+        </tr>
+    </table>
+
+    <!-- 2. Striped Table -->
+    <h2>Striped Table</h2>
+    <table class="striped">
+        <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Stock</th>
+        </tr>
+        <tr>
+            <td>Laptop</td>
+            <td>$800</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td>$500</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>Tablet</td>
+            <td>$300</td>
+            <td>15</td>
+        </tr>
+    </table>
+
+    <!-- 3. Table with Merged Cells -->
+    <h2>Table with Merged Cells</h2>
+    <table>
+        <tr>
+            <th rowspan="2">Day</th>
+            <th colspan="2">Temperature</th>
+        </tr>
+        <tr>
+            <th>Morning</th>
+            <th>Evening</th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>20°C</td>
+            <td>15°C</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>22°C</td>
+            <td>16°C</td>
+        </tr>
+    </table>
+
+    <!-- 4. Borderless Table -->
+    <h2>Borderless Table</h2>
+    <table class="borderless">
+        <tr>
+            <th>Service</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Web Design</td>
+            <td>$1000</td>
+        </tr>
+        <tr>
+            <td>SEO Optimization</td>
+            <td>$500</td>
+        </tr>
+    </table>
+
+    <!-- 5. Table with Hover Effect -->
+    <h2>Table with Hover Effect</h2>
+    <table style="border-collapse: collapse;">
+        <tr>
+            <th>Employee</th>
+            <th>Department</th>
+        </tr>
+        <tr onmouseover="this.style.backgroundColor='#ddd'" onmouseout="this.style.backgroundColor='white'">
+            <td>John</td>
+            <td>HR</td>
+        </tr>
+        <tr onmouseover="this.style.backgroundColor='#ddd'" onmouseout="this.style.backgroundColor='white'">
+            <td>Jane</td>
+            <td>Finance</td>
+        </tr>
+    </table>
+
+</body>
+</html>
